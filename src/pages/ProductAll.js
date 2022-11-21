@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard'
 const ProductAll = () => {
   const [productList, setProductList] = useState([])
   const getProducts = () => {
-    fetch('http://localhost:3001/products')
+    fetch('https://my-json-server.typicode.com/dochoul/react-hnm/products')
       .then(res => res.json())
       .then(res => {
         console.log(res);
