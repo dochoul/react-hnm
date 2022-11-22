@@ -9,8 +9,8 @@ import Navbar from './components/Navbar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>  
-    <Navbar/>
     <BrowserRouter>
+      <Navbar />
       <App />
     </BrowserRouter>
   </>
