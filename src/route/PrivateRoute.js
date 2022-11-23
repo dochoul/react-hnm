@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react'
-import { Navigate } from 'react-router-dom';
-import ProductDetail from '../pages/ProductDetail';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import ProductDetail from "../page/ProductDetail";
 
-const PrivateRoute = ({authenticate}) => {
-  useEffect(()=>{
-    console.log(authenticate);
-  },[authenticate])
-  return (
-    authenticate === true ? <ProductDetail/> : <Navigate to='/login'/>
-  )
-}
+const PrivateRoute = ({ authenticate }) => {
+  return authenticate ? <ProductDetail /> : <Navigate to="/login" />;
+};
 
-export default PrivateRoute
+export default PrivateRoute;
